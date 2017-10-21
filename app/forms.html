@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Testing form tag">
+        
+        <title>Test - Forms</title>
+        
+        <style type="text/css">
+            
+            body {
+                background-color: azure;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            #myTitle {
+                text-align: center;
+                font-weight: bold;
+                font-size: 200%;
+                color: darkred;
+            }
+            
+            input, select, fieldset {
+                
+                margin: 3px 0;
+                
+            }
+            
+            
+        
+        </style>
+        
+    </head>
+    <body>
+        <p id="myTitle">This page is made to test Form tag in HTML</p>
+        
+        <p style="font-weight: bold; font-size: 150%;">Form to become a new Real Madrid CF player: </p>
+           
+        <form action="/formResults.php" autocomplete="off" method="post" target="_blank">
+           
+            <fieldset name="PersonalData">
+                <legend>Personal Data</legend>
+                First name: <input type="text" name="fname" placeholder="Zinedine" required><br>
+                Last name: <input type="text" name="lname" placeholder="Zidane" required><br>
+                Email: <input type="email" name="email" placeholder="zzidane@realmadrid.com" required><br>
+                Year of birth: <input type="number" name="yBirth"><br>
+                Month of Birth:
+                <select name="mBirth">
+                  <option value="Jan">Jan</option>
+                  <option value="Feb">Feb</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="Aug">Aug</option>
+                  <option value="Sep">Sep</option>
+                  <option value="Oct">Oct</option>
+                  <option value="Nov">Nov</option>
+                  <option value="Dec">Dec</option>
+                </select> <br>
+            </fieldset>
+            
+            <fieldset name="Password">
+                <legend>Password</legend>
+                Password (máx 8 chars): <input type="password" name="pass" maxlength=8 required><br>
+                Confirm Password: <input type="password" name="passConfirm" maxlength=8 required><br>
+            </fieldset>
+            
+            
+            <fieldset name="OtherData">
+                <legend>Other Data</legend>
+                Insert your level of commitment with soccer: <input type="range" name="commitment"><br>
+
+                <p>Choose your favorite players: </p>
+                <label for="Ronaldo">Cristiano Ronaldo </label>
+                <input type="checkbox" name="player" id="Ronaldo" value="Ronaldo" checked="checked"><br>
+                <label for="Bale">Gareth Bale </label>
+                <input type="checkbox" name="player" id="Bale" value="Bale"><br>
+                <label for="Benzema">Karim Benzema </label>
+                <input type="checkbox" name="player" id="Benzema" value="Benzema"><br>
+                <label for="Modric">Luka Modric </label>
+                <input type="checkbox" name="player" id="Modric" value="Modric"><br>
+                <label for="Marcelo">Marcelo </label>
+                <input type="checkbox" name="player" id="Marcelo" value="Marcelo"><br>
+
+                <p>Favorite team: </p>
+                <label for="madrid">Real Madrid CF </label>
+                <input type="radio" name="team" id="madrid" value="madrid" checked="checked"><br>
+                <label for="barcelona">FC Barcelona </label>
+                <input type="radio" name="team" id="barcelona" value="barcelona"><br>
+                <label for="atletico">Atletico de Madrid </label>
+                <input type="radio" name="team" id="atletico" value="atletico"><br>
+            </fieldset>
+
+            
+            <p>Any further comments: </p>
+            <textarea rows="6" cols="80" placeholder="Place your comments"></textarea><br>
+           
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

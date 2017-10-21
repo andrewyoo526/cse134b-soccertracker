@@ -1,0 +1,23 @@
+body {
+
+    background-color: aliceblue;
+    text-align: center;
+    
+}
+
+#myTitle {
+    
+    font-weight: bold;
+    font-size: 200%;
+    color: darkred;
+}
+
+.listElement {
+    
+    margin-bottom: 10px;
+    
+}
+
+a:visited { 
+    color: red;
+}

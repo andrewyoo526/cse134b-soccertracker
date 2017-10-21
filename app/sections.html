@@ -3,6 +3,10 @@
     <head>
         <title>Sections, Style, and Meta Data</title>
         <meta charset="utf-8">
+        <meta name="description" content="Sections, Style, and Meta Data">
+        <meta name="keywords" content="Sections, Style, Meta Data, Tests, HTML, CSS">
+        <meta name="author" content="Andrew Yoo">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             h1 {color: navy}
             address {color: maroon}
@@ -11,21 +15,22 @@
     </head>
 
     <body>
-        <header>
-            <h1>Barcelona FC</h1>
-        </header>
+        <section>
+            <h1>Barcelona FC</h1> 
+            <article class="barcelona">
+                <header>  
+                    <h3>Barcelona has a stacked team</h3>
+                </header>
+                <p>Some of their best players are: Lionel Messi, Andres Iniesta, and Luis Suarez</p>
+                <aside>
+                    <p>Messi is a really nice person</p>
+                </aside>
+                <p>Although Barcelona boasts a talented roster, they are not without rivals. Real Madrid will definitely test their capabilities.</p>
+            </article>
 
-        <article class="barcelona">
-            <h3>Barcelona has a stacked team</h3>
-            <p>Some of their best players are: Lionel Messi, Andres Iniesta, and Luis Suarez</p>
-            <aside>
-                <p>Messi is a really nice person</p>
-            </aside>
-            <p>Although Barcelona boasts a talented roster, they are not without rivals. Real Madrid will definitely test their capabilities.</p>
-        </article>
-
-        <footer>
-            <address>If you find any bugs you can contact us at </address>
-        </footer>
+            <footer>
+                <address>If you find any bugs you can contact us at info@barcelonafc.com</address>
+            </footer>
+        </section>
     </body>
 </html>
