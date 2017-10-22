@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <title>Scripts</title>
+        <meta charset="UTF-8">
+        <script>
+            function loadCanvas() {
+                var cntxt = document.getElementById("soccercanvas").getContext("2d");
+                var image = new Image();
+                image.onload = function() {
+                    cntxt.drawImage(image, 0, 0);
+                }
+                image.src = "images/finale.jpg";
+            }
+        </script>
     </head>
-    <body>
-        
+    <body onload="loadCanvas();">
+        <canvas id="soccercanvas" width="1000" height="500"></canvas>
+        <noscript>
+            <a href="index.html">Index page</a>
+        </noscript>
     </body>
 </html>

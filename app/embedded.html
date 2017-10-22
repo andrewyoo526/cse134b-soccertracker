@@ -3,20 +3,38 @@
     <head>
         <meta charset="utf-8">
         <title>Embedded Content</title>
+        <style>
+            svg {fill:red;stroke:black;stroke-width:5;opacity:0.5}
+        </style>
     </head>
     <body>
         <header>
             <h3>Manchester United</h3>
-            <img src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" height="200" alt="manchester united logo"> 
+            <map name="soccerball">
+                <area shape="circle" coords="50,50,50" href="index.html" alt="go back to index">
+            </map>
+            <img usemap="#soccerball" src="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx" height="100" alt="manchester united logo"> 
         </header>
 
+        <embed type="text/html" src="https://media.giphy.com/media/126JfZ30ugRpza/giphy.gif" height="250">
+
         <iframe
-            width="500"
-            height="350"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCs7ReYBGyldwrbmTwP1_vizfW08_tQm8Y
-                &q=Manchester+United+Football+Club" allowfullscreen>
+            width="400"
+            height="250"
+            style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCs7ReYBGyldwrbmTwP1_vizfW08_tQm8Y&q=Manchester+United+Football+Club" allowfullscreen>
         </iframe>
+
+        <br>
+        
+        <audio controls>
+            <source src="images/marmelade.mp3" type="audio/mp3">
+        </audio>
+
+        <video width="300" height="200" controls>
+            <source src="images/boring.mp4" type="video/mp4">
+            <track kind="subtitles" src="boringdescription.vtt" srclang="en">  
+        </video>
 
         <footer>
             <math>
@@ -27,6 +45,9 @@
                     <mn>2</mn>
                 </msup>
             </math>
+            <svg width="150" height="150">
+                    <rect x="20" y="70" rx="20" ry="20" width="75" height="75"/>
+            </svg>
         </footer>
     </body>
 </html>
