@@ -3,7 +3,12 @@
     <head>
         <title>Text Level Elements</title>
         <meta charset="utf-8">
-        <style>
+        <style type="text/css">
+            body {
+                background-color: azure;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
             header {color: red}
             footer {color: gold}
         </style> 
@@ -46,7 +51,7 @@
         </ul>
 
         <p> 
-            The Manchester United played against Liverpool on October 14, 2017 at <time>12:30</time>. <br>
+            The <mark>Manchester United</mark> played against <mark>Liverpool</mark> on October 14, 2017 at <time>12:30</time>. <br>
             They will play against Huddersfield Town on <time datetime = "2017-10-21 15:00">October 21, 2017</time> <br>
             Liverpool plays in the <code>Premier League</code> and they are not as cool as <var>Manchester</var>.
             <samp>Manchester and Liverpool tied against each other.</samp> <br>
@@ -56,7 +61,7 @@
 
         <p> 
             <i>Captain Tsubasa</i> <ruby><rtc>キャプテン<rp> </rp>翼</rtc></ruby> is a long-running manga/anime series from 1981 that heavily revolves around the soccer, or <ruby><rtc>サッサッカー</rtc></ruby> in Japanese, that centers around an 11 year old boy named <b>Tsubasa Oozora</b> not <u>Subasa Ozora</u> who eventually play in world championships. Tsubasa is written as 
-            <ruby><rb>翼<rt>つばさ</ruby> <br>
+            <ruby><rb>翼</rb><rt>つばさ</rt></ruby> <br>
             <code>Association football</code> is another name for soccer. <br>
         </p>
 
@@ -71,6 +76,8 @@
         </p>
         <p> When it gets tough soccer games can be very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo<wbr>ng</p>
 
-        <p>Manchester United colors are <span style="color:red">red</span> and <span style="color:yellow">yellow.</p>
+        <p>Manchester United colors are <span style="color:red">red</span> and <span style="color:yellow">yellow.</span></p>
+        
+        <p style="font-weight:bold;"><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsoccer-tracker-cse134.firebaseapp.com%2Ftext-lvl-elmts.html" target="_blank">Link to validator</a> There are warnings because bdi tag is not supported in IE/Edge</p>
     </body>
 </html>
