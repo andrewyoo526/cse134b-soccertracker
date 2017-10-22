@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Attributes</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <header>
+            <h1>Event attributes</h1>
+        </header>
+
+        Write something about soccer: <input type="text" name="fname" id="fname" onblur="blurFunction()">
+
+        <p>Which Premier League soccer team do you like better?</p>
+
+        <select id="mySelect" onchange="changeFunction()">
+            <option value="NONE">NONE
+            <option value="Manchester United">Manchester United
+            <option value="Liverpool F.C.">Liverpool F.C.
+        </select> <br>
+
+        <button onclick="clickFunction()">Kick the Ball!</button> <br>
+        <button ondblclick="dblclickFunction()">Kick the Ball TWICE!</button> <br>
+
+        <img src="soccerimage.gif" onerror="errorFunction()"> <br>
+
+        Write something else about soccer: <input type="text" name="focus" id="focus" onfocus="focusFunction(this.id)"> <br>
+
+        Write another thing about soccer: <input type="text" id="myInput" oninput="inputFunction()" onkeydown="keydnFunction()">
+
+        <form action="/action_page.php" method="get">Favorite soccer video game: <input type="text" oninvalid="invalidFunction()" name="invalid" required>
+            <input type="submit" value="Submit">
+        </form>
+
+        Sorry but write another thing about soccer: <input type="text" id="myInput" onkeypress="keypressFunction()"><br>
+
+        How about another thing about soccer: <input type="text" id="myInput" onkeyup="keyupFunction()">
+
+
+        <script>
+        function blurFunction() {
+            alert("onblur fired");
+            document.getElementById('focus').style.background = "white";
+        }
+
+        function changeFunction() {
+            alert("onchange fired");
+        }
+
+        function clickFunction() {
+            alert("onclick fired");
+        }
+
+        function dblclickFunction() {
+            alert("ondblclick fired");
+        }
+
+        function errorFunction() {
+            alert("onerror fired");
+        }
+
+        function focusFunction(x) {
+            document.getElementById(x).style.background = "yellow";
+        }
+
+        function inputFunction() {
+            document.getElementById('focus').style.background = "white";
+            alert("oninput fired");
+        }
+
+        function invalidFunction() {
+            alert("oninvalid fired");
+        }
+
+        function keydnFunction() {
+            alert("onkeydown fired");
+        }
+
+        function keypressFunction() {
+            alert("onkeypress fired");
+        }
+
+        function keyupFunction() {
+            alert("onkeyup fired");
+        }
+
+
+
+
+        </script>
+    </body>
+</html>
