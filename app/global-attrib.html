@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Global Attributes</title>
         <meta charset="utf-8">
         <style>
             header {color: red}
-            footer {color: gold}
+            div.hidden_soccer_ball {
+                background-color: black;
+                color: gold;
+                margin: 20px 0 20px 0;
+                padding: 20px;
+            }
+            #missed{
+                background-color: gold;
+                color: red;
+                padding: 20px;
+            }
         </style> 
     </head>
 
@@ -13,17 +23,25 @@
         <header>
             <h1> Using Global Attributes </h1>
         </header>
-
-        <p> Information about famous soccer players: </p>
-
+        
+        <h1 class="accesskey"> Information about famous soccer players: </h1>
         <ul>
-            <li> <a title="Lionel Messi" accesskey="L" href="https://en.wikipedia.org/wiki/Lionel_Messi">Lionel Messi</a> </li>
-            <li> <a title="Ronaldinho" accesskey="R" href="https://en.wikipedia.org/wiki/Ronaldinho">Ronaldinho</a> </li> 
-            <li> <a title="Cristiano Ronaldo" accesskey="C" href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo">Cristiano Ronaldo</a> </li>
-            <li> <a title="Neymar" accesskey="N" href="https://en.wikipedia.org/wiki/Neymar">Neymar</a> </li>
-            <li> <a title="Zinedine Zidane" accesskey="Z" href="https://en.wikipedia.org/wiki/Zinedine_Zidane">Zinedine Zidane</a> </li>
+            <li> <a title="Lionel Messi" accesskey="L" tabindex="1" href="https://en.wikipedia.org/wiki/Lionel_Messi">Lionel Messi</a> </li>
+            <li> <a title="Ronaldinho" accesskey="R" tabindex="2" href="https://en.wikipedia.org/wiki/Ronaldinho">Ronaldinho</a> </li> 
+            <li> <a title="Cristiano Ronaldo" accesskey="C" tabindex="3" href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo">Cristiano Ronaldo</a> </li>
+            <li> <a title="Neymar" accesskey="N" tabindex="4" href="https://en.wikipedia.org/wiki/Neymar">Neymar</a> </li>
+            <li> <a title="Zinedine Zidane" accesskey="Z" tabindex="5" href="https://en.wikipedia.org/wiki/Zinedine_Zidane">Zinedine Zidane</a> </li>
         </ul>
 
+        <p contenteditable="true" spellcheck="true"> Do you like soccer? </p>
+
+        <div class="hidden_soccer_ball">
+            <p dir="rtl"> Kick the soccer ball! </p>
+            <p title ="Try kicking John Cena!"> You can see this soccer ball! TU TU TU TUUUUUUUUUUUUUUUUUUUUUUUUUUUU! </p>
+            <img src="https://n2.sdlcdn.com/imgs/a/0/a/Simba-John-Cena-Soccer-Ball-SDL586777473-1-48c40.jpg" alt="John Cena" width="230" height="250" hidden> <br>
+            <p id="missed"> Ha! You missed! What a loser! </p>
+            <samp translate="no">I missed the goal and the ball! NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!</samp>
+        </div>
 
     </body>
 </html>
