@@ -5,7 +5,7 @@
         <meta charset="utf-8">
     </head>
 
-    <body>
+    <body onload="loadFunction()">
         <header>
             <h1>Event attributes</h1>
         </header>
@@ -37,6 +37,21 @@
 
         How about another thing about soccer: <input type="text" id="myInput" onkeyup="keyupFunction()">
 
+        <p onmousedown="mousednFunction()" >CLICK HERE TO KICK SOCCER BALLS LIKE A STEPHEN CHOW</p>
+
+        <p> Here is a soccer ball with ... JOOOOOOOOOOHHHHHNNNNNNNNNNN CENAAAAAAAAAAAAAAAAAAAAA! TU TU TU TUUUUUUUUUUUUUU! </p>
+        <img src="https://n2.sdlcdn.com/imgs/a/0/a/Simba-John-Cena-Soccer-Ball-SDL586777473-1-48c40.jpg" alt="John Cena" width="130" height="150" onmouseenter="mouseEnter(this)" onmouseleave="mouseLeave(this)"> <br>
+
+        <p> WHYYYYYYYYYYYYYYYYYYYYY? </p>
+        <img src="https://d2e111jq13me73.cloudfront.net/sites/default/files/styles/review_gallery_carousel_slide_thumbnail/public/screenshots/csm-movie/shaolin-soccer-ss3.jpg?itok=i-XJ1EN_" alt="Shaolin Soccer" width="200" height="150" onmousemove="mouseMove(this)" onmouseout="mouseOut(this)"> <br>
+
+        <!--onmousewheel is deprecated, so we use onwheel instead-->
+        <div id="KICK" onwheel="wheel()">SCROLL HERE AND WE WILL KICK THE SOCCER BALL TO THE SKY!!!!!!!!!!!!!!</div>
+
+        <form onreset="resetFunction()"> 
+            Enter name: <input type="text">
+            <input type="reset">
+        </form>
 
         <script>
         function blurFunction() {
@@ -85,8 +100,41 @@
             alert("onkeyup fired");
         }
 
+        function loadFunction() {
+            alert("onload fired");
+        }
 
+        function mousednFunction() {
+            alert("onmousedown fired");
+        }
 
+        function mouseEnter(x) {
+            x.style.height = "250px";
+            x.style.width = "230px";
+        }
+
+        function mouseLeave(x) {
+            x.style.height = "150px";
+            x.style.width = "130px";
+        }
+
+        function mouseMove(x) {
+            x.style.height = "50px";
+            x.style.width = "100px";
+        }
+
+        function mouseOut(x) {
+            x.style.height = "150px";
+            x.style.width = "200px";
+        }
+
+        function wheel() {
+            document.getElementById("KICK").style.fontSize = "35px";
+        }
+
+        function resetFunction() {
+            alert("onreset fired");
+        }
 
         </script>
     </body>
