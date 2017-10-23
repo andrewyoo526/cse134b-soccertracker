@@ -3,6 +3,14 @@
     <head>
         <title>Event Attributes</title>
         <meta charset="utf-8">
+        <style type="text/css">
+            
+            body {
+                background-color: azure;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+        </style>
     </head>
 
     <body onload="loadFunction()">
@@ -23,118 +31,152 @@
         <button onclick="clickFunction()">Kick the Ball!</button> <br>
         <button ondblclick="dblclickFunction()">Kick the Ball TWICE!</button> <br>
 
-        <img src="soccerimage.gif" onerror="errorFunction()"> <br>
+        <img src="soccerimage.gif" alt="Soccer GIF" onerror="errorFunction()"> <br>
 
-        Write something else about soccer: <input type="text" name="focus" id="focus" onfocus="focusFunction(this.id)"> <br>
+        Who is your favorite player? <input type="text" name="focus" id="focus" onfocus="focusFunction(this.id)"> <br>
 
-        Write another thing about soccer: <input type="text" id="myInput" oninput="inputFunction()" onkeydown="keydnFunction()">
+        Who is your favorite manager? <input type="text" oninput="inputFunction()" onkeydown="keydnFunction()">
 
-        <form action="/action_page.php" method="get">Favorite soccer video game: <input type="text" oninvalid="invalidFunction()" name="invalid" required>
+        <form>Favorite soccer video game: <input type="text" oninvalid="invalidFunction()" name="invalid" required>
             <input type="submit" value="Submit">
         </form>
 
-        Sorry but write another thing about soccer: <input type="text" id="myInput" onkeypress="keypressFunction()"><br>
+        Have you ever been to a Premier League match? <input type="text" onkeypress="keypressFunction()"><br>
 
-        How about another thing about soccer: <input type="text" id="myInput" onkeyup="keyupFunction()">
+        How about another thing about soccer: <input type="text" onkeyup="keyupFunction()">
 
-        <p onmousedown="mousednFunction()" >CLICK HERE TO KICK SOCCER BALLS LIKE A STEPHEN CHOW</p>
+        <p>Click <strong onmousedown="mousednFunction()" >here</strong> to score a goal as Cristiano Ronaldo</p>
 
-        <p> Here is a soccer ball with ... JOOOOOOOOOOHHHHHNNNNNNNNNNN CENAAAAAAAAAAAAAAAAAAAAA! TU TU TU TUUUUUUUUUUUUUU! </p>
-        <img src="https://n2.sdlcdn.com/imgs/a/0/a/Simba-John-Cena-Soccer-Ball-SDL586777473-1-48c40.jpg" alt="John Cena" width="130" height="150" onmouseenter="mouseEnter(this)" onmouseleave="mouseLeave(this)"> <br>
+        <p> Put your cursor inside Real Madrid CF logo and see what happens! </p>
+        <img src="images/realmadrid.jpg" alt="Real Madrid" width="200" height="200" onmouseenter="mouseEnter(this)" onmouseleave="mouseLeave(this)"> <br>
 
-        <p> WHYYYYYYYYYYYYYYYYYYYYY? </p>
-        <img src="https://d2e111jq13me73.cloudfront.net/sites/default/files/styles/review_gallery_carousel_slide_thumbnail/public/screenshots/csm-movie/shaolin-soccer-ss3.jpg?itok=i-XJ1EN_" alt="Shaolin Soccer" width="200" height="150" onmousemove="mouseMove(this)" onmouseout="mouseOut(this)"> <br>
-
+        <div id="moveMouse">
+            <p> Move your mouse inside the following logo to discover the team it belongs to </p>
+            <img src="images/barca.png" alt="FC Barcelona" width="200" height="200" onmousemove="mouseMove()" onmouseout="mouseOut()"> <br>
+        </div>
+        <br>
+        <div id="mouseOver">
+            <p> Put your pointer inside the player to see his name </p>
+            <img src="images/ronaldo.jpg" alt="Ronaldo" width="480" height="360" onmouseover="mouseOver()" onmouseout="mouseOut()"> <br>
+        </div>
+        
+        <br>
         <!--onmousewheel is deprecated, so we use onwheel instead-->
-        <div id="KICK" onwheel="wheel()">SCROLL HERE AND WE WILL KICK THE SOCCER BALL TO THE SKY!!!!!!!!!!!!!!</div>
-
+        <div id="kick" onwheel="wheel()">SCROLL HERE TO SHOOT A PENALTY</div>
+        
+        <br>
+        
         <form onreset="resetFunction()"> 
             Enter name: <input type="text">
             <input type="reset">
         </form>
+        
+        <br>
+        
+        <form  onsubmit="submitFunction()">
+            Tell us your experience with the webpage:
+            <br>
+            <textarea rows="4" cols="50"  onselect="selectFunction()">
+            We love your feedback!
+            </textarea>
+            <input type="submit">
+        </form>
 
-        <script>
-        function blurFunction() {
-            alert("onblur fired");
-            document.getElementById('focus').style.background = "white";
-        }
+        <p style="font-weight:bold;"><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsoccer-tracker-cse134.firebaseapp.com%2Ftext-lvl-elmts.html" target="_blank">Link to validator</a> There are warnings because bdi tag is not supported in IE/Edge</p>
+        
+        <script type="text/javascript">
+            function blurFunction() {
+                alert("onblur fired");
+                document.getElementById('focus').style.background = "white";
+            }
 
-        function changeFunction() {
-            alert("onchange fired");
-        }
+            function changeFunction() {
+                alert("onchange fired");
+            }
 
-        function clickFunction() {
-            alert("onclick fired");
-        }
+            function clickFunction() {
+                alert("onclick fired");
+            }
 
-        function dblclickFunction() {
-            alert("ondblclick fired");
-        }
+            function dblclickFunction() {
+                alert("ondblclick fired");
+            }
 
-        function errorFunction() {
-            alert("onerror fired");
-        }
+            function errorFunction() {
+                alert("onerror fired");
+            }
 
-        function focusFunction(x) {
-            document.getElementById(x).style.background = "yellow";
-        }
+            function focusFunction(x) {
+                document.getElementById(x).style.background = "yellow";
+            }
 
-        function inputFunction() {
-            document.getElementById('focus').style.background = "white";
-            alert("oninput fired");
-        }
+            function inputFunction() {
+                document.getElementById('focus').style.background = "white";
+                alert("oninput fired");
+            }
 
-        function invalidFunction() {
-            alert("oninvalid fired");
-        }
+            function invalidFunction() {
+                alert("oninvalid fired");
+            }
 
-        function keydnFunction() {
-            alert("onkeydown fired");
-        }
+            function keydnFunction() {
+                alert("onkeydown fired");
+            }
 
-        function keypressFunction() {
-            alert("onkeypress fired");
-        }
+            function keypressFunction() {
+                alert("onkeypress fired");
+            }
 
-        function keyupFunction() {
-            alert("onkeyup fired");
-        }
+            function keyupFunction() {
+                alert("onkeyup fired");
+            }
 
-        function loadFunction() {
-            alert("onload fired");
-        }
+            function loadFunction() {
+                alert("onload fired");
+            }
 
-        function mousednFunction() {
-            alert("onmousedown fired");
-        }
+            function mousednFunction() {
+                alert("onmousedown fired");
+            }
 
-        function mouseEnter(x) {
-            x.style.height = "250px";
-            x.style.width = "230px";
-        }
+            function mouseEnter(x) {
+                x.style.height = "320px";
+                x.style.width = "320px";
+            }
 
-        function mouseLeave(x) {
-            x.style.height = "150px";
-            x.style.width = "130px";
-        }
+            function mouseLeave(x) {
+                x.style.height = "200px";
+                x.style.width = "200px";
+            }
 
-        function mouseMove(x) {
-            x.style.height = "50px";
-            x.style.width = "100px";
-        }
+            function mouseMove() {
+                document.getElementById("moveMouse").innerHTML = '<p> Move your mouse inside the following logo to discover the team it belongs to </p><img src="images/barca.png" alt="FC Barcelona" width="200" height="150" onmousemove="mouseMove()" onmouseout="mouseOut()"><p>FC Barcelona</p>';
+            }
 
-        function mouseOut(x) {
-            x.style.height = "150px";
-            x.style.width = "200px";
-        }
+            function mouseOver() {
+                document.getElementById("mouseOver").innerHTML = '<p> Put the pointer outside the image to hide its name! </p> <img src="images/ronaldo.jpg" alt="Ronaldo" width="480" height="360" onmouseout="mouseOut()"> <p>Cristiano Ronaldo</p><br>';
+            }
+            
+            function mouseOut() {
+                alert("Mouse out");
+            }
 
-        function wheel() {
-            document.getElementById("KICK").style.fontSize = "35px";
-        }
+            function wheel() {
+                document.getElementById("kick").style.fontSize = "35px";
+                document.getElementById("kick").innerHTML = "GOAL!!"
+            }
 
-        function resetFunction() {
-            alert("onreset fired");
-        }
+            function resetFunction() {
+                alert("onreset fired");
+            }
+            
+            function selectFunction() {
+                alert("onselect fired");
+            }
+            
+            function submitFunction() {
+                alert("onsubmit fired");
+            }
         </script>
     </body>
 </html>
